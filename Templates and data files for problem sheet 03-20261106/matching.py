@@ -41,7 +41,8 @@ print("The matching consists of the following edges:")
 print(f"   {[e for e in graph.edges if model.getVal(vars[tuple(sorted(e))]) == 1]}")
 
 # draw graph with matching
-edge_color_list = ["gray"] * len(graph.edges)
+edge_color_list = [
+                      "gray"] * len(graph.edges)
 for i, e in enumerate(graph.edges):
     if model.getVal(vars[tuple(sorted(e))]) == 1:
         edge_color_list[i] = "orange"
