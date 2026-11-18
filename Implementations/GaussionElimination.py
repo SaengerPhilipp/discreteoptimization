@@ -1,11 +1,16 @@
 import numpy as np
 
-def GaussionElimination(A,b):
+def gaussion_elimination(A,b):
     Ab = np.column_stack((A,b))
-    for i in range(len(Ab)):
-        print(1)
+    gaussion_elimination_inner(Ab)
+    return Ab
 
-A = np.array([[1,2,3],[4,5,6],[7,8,9]])
-
-b = np.array([1,2,3])
-GaussionElimination(A,b)
+def gaussion_elimination_inner(A):
+    print(A)
+    if len(A)>1:
+        for i in range(1,len(A)):
+            f = A[i][0]
+            A[i][0] = 0
+            for j in range(1,len(A[i])):
+                A[i][j] = A[i][j]*A[0][0] - A[0][j]*f
+        gaussion_elimination_inner(A[1:len(A), 1:len(A[0])])
