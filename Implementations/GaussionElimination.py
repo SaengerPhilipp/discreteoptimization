@@ -3,7 +3,8 @@ import numpy as np
 def gaussion_elimination(A,b):
     Ab = np.column_stack((A,b))
     gaussion_elimination_inner(Ab)
-    return Ab
+    print(Ab)
+    return Ab[0:len(Ab), 0:len(Ab[0])-1], Ab[:,len(Ab[0])-1]
 
 def gaussion_elimination_inner(A):
     print(A)

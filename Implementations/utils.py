@@ -11,3 +11,5 @@ def ggt(m,n):
             return m
         else:
             return ggt(m,p)
+
+def solve_upper_triangular(A):
