@@ -16,7 +16,6 @@ def ggt(m,n):
             return ggt(m,p)
 
 def solve_upper_triangular(A,b):
-    x = np.zeros(len(A))
-    for i in range(len(A)):
-        for j in range(len(A[0])):
-            print(x)
+    x = [b[-1]/A[-1][-1]]
+    for i in range(len(A)-2,-1,0):
+        x = np.insert(x,0,A[i,i:len(A[0])])
