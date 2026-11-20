@@ -1,5 +1,6 @@
 import numpy as np
 
+#determines greatest common divisor
 def ggt(m,n):
     if m > n:
         p = m%n
@@ -14,6 +15,7 @@ def ggt(m,n):
         else:
             return ggt(m,p)
 
+#solve a system of linear equations consisting of a square matrix that is in upper triangular shape and a vector
 def solve_upper_triangular_squared(A,b):
     x = [b[-1]/A[-1][-1]]
     for i in range(len(A)-2,-1,-1):

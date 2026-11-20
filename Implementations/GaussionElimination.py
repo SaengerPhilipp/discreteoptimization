@@ -22,8 +22,6 @@ def gaussion_elimination_inner(A):
 def switch_zero_row(A):
     for i in range(1,len(A)):
         if A[i][0] != 0:
-            temp = A[0]
-            A[0] = A[i]
-            A[i] = temp
+            A[[0,i]] = A[[i,0]]
             return True
     return False
