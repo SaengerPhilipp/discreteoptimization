@@ -16,7 +16,9 @@ def gaussion_elimination_inner(A):
                     A[i][0] = 0
                     for j in range(1,len(A[i])):
                         A[i][j] = A[i][j]*A[0][0] - A[0][j]*f
-        gaussion_elimination_inner(A[1:len(A), 1:len(A[0])])
+            gaussion_elimination_inner(A[1:len(A), 1:len(A[0])])
+        else:
+            gaussion_elimination_inner(A[:,1:len(A[0])])
 
 #if a row used for eliminating other rows in the gaussion elimination starts with a zero we try to switch it with a row that contains a value not zero and return True otherwise we return false if we can't find such a row
 def switch_zero_row(A):
