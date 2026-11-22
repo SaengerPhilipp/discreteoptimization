@@ -17,7 +17,7 @@ def ggt(m,n):
 
 #solve a system of linear equations consisting of a square matrix that is in upper triangular shape and a vector
 def solve_upper_triangular_squared(A,b):
-    x = [b[-1]/A[-1][-1]]
+    x = np.array([b[-1]/A[-1][-1]])
     for i in range(A.shape[0]-2,-1,-1):
         x = np.insert(x,0,(b[i]-np.inner(A[i, i+1:A.shape[1]],x))/A[i][i])
     return x
