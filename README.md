@@ -14,3 +14,6 @@ coming soon
 
 coming soon
 
+## AI Guidelines 
+
+no AI agents were used for this project! The code is written by me in its entirety. The only use of AI is as an extended Documentation of Python and numpy.
